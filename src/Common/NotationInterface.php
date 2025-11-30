@@ -17,7 +17,6 @@ namespace Advandz\Notation\Common;
  */
 interface NotationInterface
 {
-
     /**
      * Returns the MIME type used for files associated to the notation format
      *
