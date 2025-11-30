@@ -40,7 +40,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Advandz\\Toon\\Tests\\": "tests/"
+            "Advandz\\Notation\\Tests\\": "tests/"
         }
     },
     "scripts": {

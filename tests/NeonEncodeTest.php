@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Advandz\Toon\Tests;
+namespace Advandz\Notation\Tests;
 
 use Advandz\Notation\Neon;
 use Advandz\Notation\Common\Notation;
