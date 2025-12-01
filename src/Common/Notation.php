@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Advandz\Notation\Common;
 
-use Nette\SmartObject;
+use Nette\StaticClass;
 
 /**
  * Abstract base class for notation implementations
@@ -19,7 +19,7 @@ use Nette\SmartObject;
  */
 abstract class Notation implements NotationInterface
 {
-    use SmartObject;
+    use StaticClass;
 
     /**
      * @var int Flag to throw exceptions on errors instead of returning null
