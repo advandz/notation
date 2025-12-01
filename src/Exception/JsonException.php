@@ -13,6 +13,6 @@ namespace Advandz\Notation\Exception;
  * @license https://opensource.org/licenses/MIT MIT License
  * @link https://www.advandz.com/ Advandz
  */
-class JsonException extends \Exception
+class JsonException extends \RuntimeException
 {
 }

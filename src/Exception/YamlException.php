@@ -13,6 +13,6 @@ namespace Advandz\Notation\Exception;
  * @license https://opensource.org/licenses/MIT MIT License
  * @link https://www.advandz.com/ Advandz
  */
-class YamlException extends \Exception
+class YamlException extends \RuntimeException
 {
 }
