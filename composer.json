@@ -48,7 +48,8 @@
         "test-coverage": "tester tests -C --coverage coverage.html --coverage-src src",
         "phpstan": "phpstan analyse src --level=max",
         "cs-check": "phpcs --standard=PSR12 src",
-        "cs-fix": "phpcbf --standard=PSR12 src"
+        "cs-fix": "phpcbf --standard=PSR12 src",
+        "format": "phpcbf --standard=PSR12 src"
     },
     "config": {
         "sort-packages": true,

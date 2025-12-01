@@ -15,5 +15,4 @@ namespace Advandz\Notation\Exception;
  */
 class Neon extends \Exception
 {
-
 }
