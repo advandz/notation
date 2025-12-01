@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Advandz\Notation\Common;
 
-use Nette\StaticClass;
-
 /**
  * Abstract base class for notation implementations
  *
@@ -19,8 +17,6 @@ use Nette\StaticClass;
  */
 abstract class Notation implements NotationInterface
 {
-    use StaticClass;
-
     /**
      * @var int Flag to throw exceptions on errors instead of returning null
      */
@@ -50,6 +46,14 @@ abstract class Notation implements NotationInterface
      * @var \Throwable|null Stores the last error that occurred
      */
     protected static $error;
+
+    /**
+     * Class is static and cannot be instantiated
+     */
+    private function __construct()
+    {
+        return false;
+    }
 
     /**
      * Returns the MIME type used for files associated to the notation format
