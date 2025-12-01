@@ -34,7 +34,7 @@ class Csv extends Notation
     {
         try {
             if (is_scalar($data)) {
-                throw new Exception\Csv('The data to encode must not be a scalar value.');
+                throw new Exception\CsvException('The data to encode must not be a scalar value.');
             }
 
             // Fetch headers
@@ -46,7 +46,7 @@ class Csv extends Notation
                 if (!is_scalar($record)) {
                     $record = (array) $record;
                 } else {
-                    throw new Exception\Csv("The row #{$row} is a scalar value.");
+                    throw new Exception\CsvException("The row #{$row} is a scalar value.");
                 }
             }
 

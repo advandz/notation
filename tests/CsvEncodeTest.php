@@ -62,7 +62,7 @@ class CsvEncodeTest extends TestCase
     {
         Assert::exception(function () {
             Csv::encode("scalar", Csv::THROW_ON_ERROR);
-        }, \Advandz\Notation\Exception\Csv::class);
+        }, \Advandz\Notation\Exception\CsvException::class);
     }
 
     public function testEncodeRowWithScalarThrowsError(): void
@@ -84,7 +84,7 @@ class CsvEncodeTest extends TestCase
                 "invalid scalar row",
             ];
             Csv::encode($data, Csv::THROW_ON_ERROR);
-        }, \Advandz\Notation\Exception\Csv::class);
+        }, \Advandz\Notation\Exception\CsvException::class);
     }
 
     public function testEncodeNumericValues(): void

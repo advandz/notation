@@ -197,7 +197,7 @@ abstract class Notation implements NotationInterface
             $exception = new \Exception($exception, 500);
         } else {
             $class = (new \ReflectionClass(static::class))->getShortName();
-            $throwable = 'Advandz\\Notation\\Exception\\' . $class;
+            $throwable = 'Advandz\\Notation\\Exception\\' . $class . 'Exception';
             if (!class_exists($throwable)) {
                 $throwable = '\\Exception';
             }

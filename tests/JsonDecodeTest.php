@@ -160,7 +160,7 @@ class JsonDecodeTest extends TestCase
         Assert::exception(function () {
             $invalidJson = '{invalid json}';
             Json::decode($invalidJson, false, Json::THROW_ON_ERROR);
-        }, \Advandz\Notation\Exception\Json::class);
+        }, \Advandz\Notation\Exception\JsonException::class);
     }
 
     public function testDecodeUnicodeString(): void
