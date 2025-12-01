@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Advandz\Notation;
 
+use Advandz\Notation\Exception\CsvException;
 use Advandz\Notation\Common\Notation;
 use League\Csv\Reader as CsvDecoder;
 use League\Csv\Writer as CsvEncoder;
@@ -33,8 +34,8 @@ class Csv extends Notation
     public static function encode(mixed $data, int $flags = 0, int $depth = 512): ?string
     {
         try {
-            if (is_scalar($data)) {
-                throw new Exception\CsvException('The data to encode must not be a scalar value.');
+            if (is_scalar($data) && ($flags & self::THROW_ON_ERROR)) {
+                throw new CsvException('The data to encode must not be a scalar value.');
             }
 
             // Fetch headers
@@ -45,8 +46,8 @@ class Csv extends Notation
             foreach ($records as $row => &$record) {
                 if (!is_scalar($record)) {
                     $record = (array) $record;
-                } else {
-                    throw new Exception\CsvException("The row #{$row} is a scalar value.");
+                } else if ($flags & self::THROW_ON_ERROR) {
+                    throw new CsvException("The row #{$row} is a scalar value.");
                 }
             }
 

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Advandz\Notation;
 
+use Advandz\Notation\Exception\NeonException;
 use Advandz\Notation\Common\Notation;
 use Nette\Neon\Neon as NeonNotation;
 
@@ -76,6 +77,10 @@ class Neon extends Notation
     public static function decode(mixed $data, bool $associative = false, int $flags = 0, int $depth = 512): mixed
     {
         try {
+            if (!empty($data) && NeonNotation::decode($data) == null) {
+                throw new NeonException('The given data is not valid.');
+            }
+
             if ((($flags & self::FORCE_ARRAY) || $associative) && !is_scalar(NeonNotation::decode($data))) {
                 return (array) NeonNotation::decode($data);
             }
