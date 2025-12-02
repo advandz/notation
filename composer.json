@@ -1,6 +1,6 @@
 {
     "name": "advandz/notation",
-    "description": "Unified PHP wrappers for multiple data serialization formats including CSV, JSON, TOON, YAML, NEON, TOML, and PHP serialization",
+    "description": "Unified PHP wrappers for multiple data serialization formats including CSV, JSON, TOON, YAML, NEON, and PHP serialization",
     "type": "library",
     "keywords": [
         "toon",
