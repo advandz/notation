@@ -22,7 +22,6 @@
         "nette/neon": "^v3.4.0",
         "nette/utils": "^v4.0.0",
         "symfony/yaml": "^6.4.0",
-        "yosymfony/toml": "^1.0.0",
         "league/csv": "^9.8.0"
     },
     "require-dev": {

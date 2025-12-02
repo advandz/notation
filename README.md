@@ -27,7 +27,6 @@ The same helper naming convention is available for all notations:
 | csv_encode    | csv_decode    |
 | json_encode   | json_decode   |
 | yaml_encode   | yaml_decode   |
-| toml_encode   | toml_decode   |
 | neon_encode   | neon_decode   |
 | php_encode    | php_decode    |
 | toon_encode   | toon_decode   |
@@ -36,7 +35,7 @@ The same helper naming convention is available for all notations:
 It brings support for multiple notation formats together under one unified API, eliminating the need to learn a
 different workflow for every standard.
 
-Whether you prefer CSV, JSON, YAML, TOML, NEON, PHP serialization, or TOON notation, the package provides
+Whether you prefer CSV, JSON, YAML, NEON, PHP serialization, or TOON notation, the package provides
 full support across all of them.
 
 | Class                   | Notation            |
@@ -45,7 +44,6 @@ full support across all of them.
 | `Advandz\Notation\Json` | JSON                |
 | `Advandz\Notation\Neon` | NEON                |
 | `Advandz\Notation\Php`  | PHP (serialization) |
-| `Advandz\Notation\Toml` | TOML                |
 | `Advandz\Notation\Toon` | TOON                |
 | `Advandz\Notation\Yaml` | YAML                |
 

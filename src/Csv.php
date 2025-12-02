@@ -21,6 +21,21 @@ use League\Csv\Writer as CsvEncoder;
 class Csv extends Notation
 {
     /**
+     * Handle static method calls
+     *
+     * Forwards any unrecognized static method calls to the underlying notation class.
+     * This allows access to additional methods not explicitly wrapped.
+     *
+     * @param string $name The method name being called
+     * @param array $args The arguments passed to the method
+     * @return mixed The result from the called method
+     */
+    public static function __callStatic(string $name, array $args): mixed
+    {
+        return call_user_func_array([CsvEncoder::class, $name], $args);
+    }
+
+    /**
      * Encode data to CSV format
      *
      * Converts PHP data structures into JSON string representation with support for
